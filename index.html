@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html LANG="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>animacion</title>
+    <style media="screen">
+
+    .fondo{
+      left: 0px;
+      up: 0px;
+      height: 1000px;
+      width: 1000px;
+      position: absolute;
+      background:url("ring.jpg");
+    }
+
+      .personaje {
+        height:800px;
+        width:650px;
+        background:url("pelaa.png");
+        margin:0 auto;
+        background-position: -7980px 0;
+        position: absolute;
+        left: 13%;
+        up: 25px;
+        animation: correr 2s steps(12) infinite;
+
+      }
+
+      .personaje1 {
+        height:350px;
+        width:120px;
+        background:url("pajaro.png");
+        margin:0 auto;
+        background-position: -720px 0;
+        position: absolute;
+        left: 10%;
+        up: 15px;
+        animation: aleteo 1s steps(6) infinite, volar 8s infinite;
+
+      }
+
+      @keyframes correr{
+        0%{
+          background-position: 0px;
+        }
+        100%{
+          background-position: -7980px;
+        }
+
+      }
+
+      @keyframes aleteo{
+        0%{
+          background-position: 0px;
+        }
+        100%{
+          background-position: -720px;
+        }
+      }
+
+      @keyframes volar{
+          0%{
+            left: 10px;
+          }
+          100%{
+            left: 850px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+        <div class="fondo"></div>
+        <div class="personaje"></div>
+        <div class="personaje1"></div>
+  </body>
+</html>
